@@ -7,12 +7,10 @@ export default function Hero() {
             <img 
                 src={Photos} 
                 alt="photos" 
-                className="tiled_container" 
+                className="hero_image" 
             />
             <h1 className="hero_header">Online Experiences</h1>
-            <p className="hero_text">Join unique interactive activites led by</p>
-            <p className="hero_text">one-of-a-kind hosts, all without leaving</p>
-            <p className="hero_text">home.</p>
+            <p className="hero_text">Join unique interactive activites led by one-of-a-kind hosts, all without leaving home.</p>
         </div>
     );
 }
