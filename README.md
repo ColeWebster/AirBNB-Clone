@@ -11,4 +11,5 @@ Creating a clone of Airbnb while furthring my skills in React
 06/13
 - Added Hero component
 - Added Hero image
-- Added CSS for component
+- Added CSS for Hero component
+- Started props lesson outside of project
