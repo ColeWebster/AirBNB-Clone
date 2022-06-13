@@ -16,3 +16,25 @@
   margin-top: 22px;
   max-width: 100px;
 }
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tiled_container {
+  height: 230px;
+  width: 395px;
+  margin-left: 75px; 
+  margin-top: 100px;
+}
+
+.hero_header {
+  font-size: 40px;
+  margin-left: 30px;
+}
+ 
+.hero_text {
+  margin-left: 30px;
+  margin-top: -20px;
+}
