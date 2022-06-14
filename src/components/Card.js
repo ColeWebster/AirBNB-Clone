@@ -1,19 +1,22 @@
+
 import React from "react";
-import Swimmer from "../images/swimmer.png";
 import Star from "../images/star.png";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="card_container">
-      <img src={Swimmer} className="card_image" />
+      <img 
+        src={`../images/${props.image}`}
+        className="card_image" 
+      />
       <div className="card_stats">
         <img src={Star} className="card_star"/>
-        <span>5.0</span>
-        <span className="gray">(6) · </span>
-        <span className="gray">USA</span>
+        <span>{props.rating}</span>
+        <span className="gray">{props.reviewCount} · </span>
+        <span className="gray">{props.country}</span>
       </div>
-      <p>Life Lessons with Katie Zaferes</p>
-      <p><span className="bold">From $136</span> / person</p>
+      <p>{props.title}</p>
+      <p><span className="bold">From ${props.price}</span> / person</p>
     </div>
   );
 }
