@@ -12,22 +12,28 @@ export default function Card() {
     }
 
     return (
-      <div className="card_container">
-        {badgeText && <div className="card_badge">{badgeText}</div>}
-        <img src={`../images/${card.coverImg}`} className="card_image" />
-        <div className="card_stats">
-          <img src={Star} className="card_star" />
-          <span>{card.stats.rating}</span>
-          <span className="gray">({card.stats.reviewCount}) · </span>
-          <span className="gray">{card.location}</span>
-        </div>
-        <div className="card_title">{card.title}</div>
-        <div className="card_price">
-          <span className="bold">From ${card.price}</span> / person{" "}
-        </div>
-      </div>
+      <section className="cards_list">
+          <div className="card">
+            {badgeText && <div className="card_badge">{badgeText}</div>}
+            <img src={`../images/${card.coverImg}`} className="card_image" />
+            <div className="card_stats">
+              <img src={Star} className="card_star" />
+              <span>{card.stats.rating}</span>
+              <span className="gray">({card.stats.reviewCount}) · </span>
+              <span className="gray">{card.location}</span>
+            </div>
+            <div className="card_title">{card.title}</div>
+            <div className="card_price">
+              <span className="bold">From ${card.price}</span> / person{" "}
+            </div>
+          </div>  
+      </section>
     );
   });
 
-  return <section className="card_row">{siteCards}</section>;
+  return (
+    <section className="card_row">
+      {siteCards}
+    </section>
+  );
 }

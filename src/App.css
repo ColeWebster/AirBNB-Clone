@@ -15,6 +15,10 @@ body {
   font-weight: bold;
 }
 
+section {
+  padding: 20px;
+}
+
 .navbar {
   height: 70px;
   display: flex;
@@ -43,10 +47,20 @@ body {
   margin-top: 0px;
 }
 
-.card_container {
-  padding: 20px;
+.cards_list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.card_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
   width: 175px;
-  font-size: 12px;
+  font-size: 14px;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -59,11 +73,6 @@ body {
   margin-bottom: 9px;
 }
 
-.card_title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .card_stats {
   display: flex;
   align-items: center;
@@ -71,18 +80,6 @@ body {
 
 .card_star {
   height: 14px;
-}
-
-.card_row {
-  display: flex;
-  flex-direction: row;
-}
-
-.cards-list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
 }
 
 .card_price {
