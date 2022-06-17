@@ -47,12 +47,16 @@ body {
   padding: 20px;
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card_image {
   width: 100%;
-  border-radius: 9px;
   max-height: 175px;
+  border-radius: 9px;
+  margin-bottom: 9px;
 }
 
 .card_stats {
@@ -67,4 +71,15 @@ body {
 .card_row {
   display: flex;
   flex-direction: row;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card_price {
+  margin-top: auto;
 }
