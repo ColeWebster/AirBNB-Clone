@@ -1,5 +1,3 @@
-# Notes
-
 ## Challenges related to .map
 
 ### Challenge 1:

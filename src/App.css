@@ -52,6 +52,7 @@ body {
 .card_image {
   width: 100%;
   border-radius: 9px;
+  max-height: 175px;
 }
 
 .card_stats {
@@ -63,3 +64,7 @@ body {
   height: 14px
 }
 
+.card_row {
+  display: flex;
+  flex-direction: row;
+}
