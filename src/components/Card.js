@@ -10,7 +10,7 @@ export default function Card() {
         <div className="card_stats">
           <img src={Star} className="card_star" />
           <span>{card.stats.rating}</span>
-          <span className="gray">{card.stats.reviewCount} · </span>
+          <span className="gray">({card.stats.reviewCount}) · </span>
           <span className="gray">{card.location}</span>
         </div>
         <p>{card.title}</p>
