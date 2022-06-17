@@ -4,8 +4,16 @@ import cardData from "../data";
 
 export default function Card() {
   const siteCards = cardData.map((card) => {
+    let badgeText;
+    if (card.openSpots === 0) {
+      badgeText = "Sold Out";
+    } else if (card.location === "Online") {
+      badgeText = "Online";
+    }
+
     return (
       <div className="card_container">
+        {badgeText && <div className="card_badge">{badgeText}</div>}
         <img src={`../images/${card.coverImg}`} className="card_image" />
         <div className="card_stats">
           <img src={Star} className="card_star" />
@@ -13,7 +21,7 @@ export default function Card() {
           <span className="gray">({card.stats.reviewCount}) · </span>
           <span className="gray">{card.location}</span>
         </div>
-        <p>{card.title}</p>
+        <div className="card_title">{card.title}</div>
         <div className="card_price">
           <span className="bold">From ${card.price}</span> / person{" "}
         </div>
@@ -21,7 +29,5 @@ export default function Card() {
     );
   });
 
-  return (
-    <section className="card_row">{siteCards}</section>
-  );
+  return <section className="card_row">{siteCards}</section>;
 }
